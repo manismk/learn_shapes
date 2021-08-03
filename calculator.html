@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Triangles | Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Triangles - Calculator</h1>
+    </header>
+    <main>
+      <div class="container">
+        <section>
+          <h2>Triangle Calculations</h2>
+          <p>
+            Using these Calculator, you can calculate the area of triangle by
+            using three methods, you can also calculate the hypotenuse of the
+            right angled triangle and also you can check whether the angles can
+            make a triangle or not.
+          </p>
+          <div class="btnholder">
+            <a href="/quiz.html" class="btn">Take a Quiz</a>
+            <a href="/index.html" class="btn">Learn</a>
+          </div>
+        </section>
+        <section>
+          <h2>Area using Base and Height</h2>
+          <form id="areaBH">
+            <label for="baseBH"
+              >Base =
+              <input type="number" id="baseBH" min="0.01" step="0.01" required
+            /></label>
+            <wbr />
+
+            <label for="heightBH"
+              >Height =
+              <input
+                type="number"
+                id="heightBH"
+                min="0.01"
+                step="0.01"
+                required
+            /></label>
+            <br />
+            <input class="btn" type="submit" value="Calculate" />
+          </form>
+          <p id="answerareaBH" class="hidden"></p>
+        </section>
+        <section>
+          <h2>Area using lengths of 3 sides</h2>
+          <p>
+            Lets assume a, b and c are lengths of 3 sides of a triangle.Enter
+            a,b,c.
+          </p>
+          <form id="areaSides">
+            <label for="sidea"
+              >a =
+              <input type="number" id="sidea" min="0.01" step="0.01" required
+            /></label>
+
+            <label for="sideb"
+              >b =
+              <input type="number" id="sideb" min="0.01" step="0.01" required
+            /></label>
+            <label for="sidec"
+              >c =
+              <input type="number" id="sidec" min="0.01" step="0.01" required
+            /></label>
+            <br />
+            <input class="btn" type="submit" value="Calculate" />
+          </form>
+          <p id="answerareaSides" class="hidden"></p>
+        </section>
+        <section>
+          <h2>Area using Two sides and the angle between them</h2>
+          <p>
+            Lets take a, b are lengths of 2 sides of a triangle and γ as angle
+            between them(in deg).Enter a,b,γ.
+          </p>
+          <form id="areaSideAngle">
+            <label for="side1"
+              >a =
+              <input type="number" id="side1" min="0.01" step="0.01" required
+            /></label>
+
+            <label for="side2"
+              >b =
+              <input type="number" id="side2" min="0.01" step="0.01" required
+            /></label>
+            <label for="angle"
+              >γ =
+              <input type="number" id="angle" min="0.01" step="0.01" required
+            /></label>
+            <br />
+            <input class="btn" type="submit" value="Calculate" />
+          </form>
+          <p id="answerareasideAngle" class="hidden"></p>
+        </section>
+        <section>
+          <h2>Find hypotenuse of Right angle triangle</h2>
+          <p>
+            Enter the base length and perpendicular length of right angle
+            triangle in a and b.
+          </p>
+          <form id="hypotenuse">
+            <label for="base"
+              >a =
+              <input type="number" id="base" min="0.01" step="0.01" required
+            /></label>
+
+            <label for="perpendicular"
+              >b =
+              <input
+                type="number"
+                id="perpendicular"
+                min="0.01"
+                step="0.01"
+                required
+            /></label>
+
+            <br />
+            <input class="btn" type="submit" value="Calculate" />
+          </form>
+          <p id="answerHypotenuse" class="hidden"></p>
+        </section>
+        <section>
+          <h2>Check Its triangle or not- by entering angles</h2>
+          <p>Enter the three angles of triangle in a,b and c box.</p>
+          <form id="checkTriangle">
+            <label for="angle1"
+              >a = <input type="number" id="angle1" min="1" step="1" required
+            /></label>
+
+            <label for="angle2"
+              >b = <input type="number" id="angle2" min="1" step="1" required
+            /></label>
+            <label for="angle3"
+              >c = <input type="number" id="angle3" min="1" step="1" required
+            /></label>
+
+            <br />
+            <input class="btn" type="submit" value="Check" />
+          </form>
+          <p id="answercheckTriangle" class="hidden"></p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Made with 💚 By <a href="https:manikandan.netlify.app">Manikandan</a>
+      </p>
+    </footer>
+    <script src="calculator.js"></script>
+  </body>
+</html>

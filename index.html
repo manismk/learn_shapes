@@ -20,29 +20,49 @@
             corners. Triangles are commonly used in construction to create
             supporting structures and figure heavily in artworks.
           </p>
+          <div class="btnholder">
+            <a href="/quiz.html" class="btn">Take a Quiz</a>
+            <a href="/calculator.html" class="btn">Calculator</a>
+          </div>
         </section>
         <section>
           <h2>Area using Base and Height</h2>
-          <p><code> Area of triange = 1/2 x base x height</code></p>
+          <p>
+            <code id="areaBH"> Area of triangle = 1/2 x base x height </code>
+            <button id="copyareaBH" onclick="copy(areaBH,copyareaBH)">
+              Copy
+            </button>
+          </p>
         </section>
         <section>
           <h2>Area using lengths of 3 sides</h2>
           <p>Lets take a, b and c are lengths of 3 sides of a triangle.</p>
           <p>
-            <code
-              >Area of triange = 0.25 * √( (a + b + c) * (-a + b + c) * (a - b +
-              c) * (a + b - c) )
+            <code id="areaSide"
+              >Area of triangle = 0.25 * √( (a + b + c) * (-a + b + c) * (a - b
+              + c) * (a + b - c) )
             </code>
+            <button id="copyareaSide" onclick="copy(areaSide,copyareaSide)">
+              Copy
+            </button>
           </p>
         </section>
         <section>
           <h2>Area using Two sides and the angle between them</h2>
           <p>
-            Lets take a, b are lengths of 2 sides of a triangle and y as angle
+            Lets take a, b are lengths of 2 sides of a triangle and γ as angle
             between them.
           </p>
           <p>
-            <code>Area of triange = 0.5 * a * b * sin(γ) </code>
+            <code id="areaSideAngle"
+              >Area of triangle = 0.5 * a * b * sin(γ)
+            </code>
+            <button
+              id="copyareaSideAngle"
+              onclick="copy(areaSideAngle,copyareaSideAngle)"
+            >
+              Copy
+            </button>
           </p>
         </section>
         <section>
@@ -54,11 +74,11 @@
             </li>
             <li>
               A triangle with all angles measuring less than 90° is called an
-              <span> acute triangle.</span>
+              <span> acute angled triangle.</span>
             </li>
             <li>
               A triangle with an angle measuring more than 90° is called an
-              <span> obtuse angle.</span>
+              <span> obtuse angled angle.</span>
             </li>
           </ul>
         </section>
@@ -90,6 +110,10 @@
               The longest side of a right angle triangle is called the
               hypotenuse, it is always found opposite the right angle.
             </li>
+            <li>
+              Sum of two sides of a triangle is always greater than the third
+              side.
+            </li>
           </ul>
         </section>
       </div>
@@ -99,5 +123,40 @@
         Made with 💚 By <a href="https:manikandan.netlify.app">Manikandan</a>
       </p>
     </footer>
+    <script>
+      function copy(field, btnName) {
+        var textArea = document.createElement("textarea");
+
+        textArea.style.position = "fixed";
+        textArea.style.top = -12;
+        textArea.style.left = -50;
+
+        textArea.style.width = "2em";
+        textArea.style.height = "2em";
+
+        textArea.style.padding = 0;
+
+        textArea.style.border = "none";
+        textArea.style.outline = "none";
+        textArea.style.boxShadow = "none";
+
+        textArea.style.background = "transparent";
+
+        textArea.value = field.innerText;
+
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+          document.execCommand("copy");
+          btnName.innerText = "Copied!";
+        } catch (err) {
+          btnName.innerText = "Error!";
+        }
+        setTimeout(function () {
+          btnName.innerText = "Copy";
+        }, 2000);
+      }
+    </script>
   </body>
 </html>
