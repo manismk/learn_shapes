@@ -44,6 +44,8 @@ areaSideAngle.addEventListener("submit", (e) => {
   var b = Number(document.querySelector("#side2").value);
   var angle = Number(document.querySelector("#angle").value);
 
+  //console.log("click");
+
   if (angle < 180) {
     var area = 0.5 * a * b * Math.sin(angle * (Math.PI / 180));
 
