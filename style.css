@@ -23,7 +23,9 @@ footer {
   padding: 1rem;
   color: white;
 }
-
+footer {
+  margin-top: 1rem;
+}
 footer a {
   text-decoration: none;
   font-weight: bold;
@@ -101,6 +103,7 @@ form {
 
 form label {
   display: inline-block;
+  cursor: pointer;
 }
 
 input[type="number"] {
@@ -137,8 +140,8 @@ form + p {
   font-weight: 600;
   padding: 0 1rem;
 }
-input[type="radio"]:checked {
-  color: var(--header-and-footer);
+input[type="radio"] {
+  cursor: pointer;
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
