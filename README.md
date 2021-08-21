@@ -1,3 +1,4 @@
+[![wakatime](https://wakatime.com/badge/github/manismk/learn_shapes.svg)](https://wakatime.com/badge/github/manismk/learn_shapes)
 # learn_about_triangle_in_simplified_manner
 
 This is build using html,css,js.
