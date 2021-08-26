@@ -125,30 +125,8 @@
     </footer>
     <script>
       function copy(field, btnName) {
-        var textArea = document.createElement("textarea");
-
-        textArea.style.position = "fixed";
-        textArea.style.top = -12;
-        textArea.style.left = -50;
-
-        textArea.style.width = "2em";
-        textArea.style.height = "2em";
-
-        textArea.style.padding = 0;
-
-        textArea.style.border = "none";
-        textArea.style.outline = "none";
-        textArea.style.boxShadow = "none";
-
-        textArea.style.background = "transparent";
-
-        textArea.value = field.innerText;
-
-        document.body.appendChild(textArea);
-        textArea.select();
-
         try {
-          document.execCommand("copy");
+          navigator.clipboard.writeText(field.innerText);
           btnName.innerText = "Copied!";
         } catch (err) {
           btnName.innerText = "Error!";
